@@ -189,8 +189,8 @@ var myNumbersPush = (function(){
 var myNamesSlice = (function(){
   console.log(myNames);
   console.log(myNames.slice(2, 5));
-  // (index spot, how far from that spot to go) takes out indexes
-  // will return ["Otto", "Etta", "Brianne"] ????? why 5?????
+  // (index spot to start on, index to stop on) takes out indexes
+  // will return ["Otto", "Etta", "Brianne"]
   console.log(myNames);
 });
 
@@ -208,7 +208,7 @@ var myNumbersSplice = (function(){
 
 var myNamesShift = (function(){
   console.log(myNames);
-  console.log(myNames.shift()); //removes from front and returns that element ???parameters???
+  console.log(myNames.shift()); //removes first index and returns that element shortening the array ???no parameters???
   console.log(myNames);
 });
 
@@ -224,16 +224,14 @@ var myNumbersUnshift = (function(){
 
 var myNumbersFilter = (function(){
   console.log(myNumbers);
-  console.log(myNumbers.filter());
-  console.log(myNumbers);
+  console.log(  myNumbers.filter(function(elem){return elem % 2 === 0})  ); //parameters are a function THIS comparison returns even numbers' index into new array
 });
 
 // .filter()
 
-var myNamesMap = (function(){
-  console.log(myNames);
-  console.log(myNames.map());
-  console.log(myNames);
+var myNumbersMap = (function(){
+  console.log(myNumbers);
+  console.log(  myNumbers.map(function(elem){return elem + 2})  ); //parameters are a function that is applied to each index into new array
 });
 
 // .map()
